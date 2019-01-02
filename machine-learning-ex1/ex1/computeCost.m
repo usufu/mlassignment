@@ -18,5 +18,13 @@ J = 0;
 
 
 % =========================================================================
+hx=transpose(theta) * transpose(X);% 1xm
+z=transpose(hx) - y; % mx1
+
+J = (transpose(z) * z ) / (2 * m);
+
+
+%transpose(z) * X
+
 
 end
