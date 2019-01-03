@@ -17,8 +17,11 @@ for iter = 1:num_iters
     %       of the cost function (computeCost) and gradient here.
     %
 
+  hx=transpose(theta) * transpose(X); % 1xm
+  z=transpose(hx) - y; % mx1
 
-
+  theta(1) = theta(1) - alpha * (sum(z) * 1) / m;
+  theta(2) = theta(2) - alpha * (transpose(z) * X(:,2)) / m;
 
 
 
@@ -26,7 +29,7 @@ for iter = 1:num_iters
     % ============================================================
 
     % Save the cost J in every iteration    
-    J_history(iter) = computeCost(X, y, theta);
+    J_history(iter) = computeCost(X, y, theta)
 
 end
 
