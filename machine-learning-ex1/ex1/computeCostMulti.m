@@ -13,8 +13,10 @@ J = 0;
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
 
+X0 = X * theta;
 
-
+J = transpose(X0 - y) * (X0 - y) / 2*m;
+%J = (1 / (2*m) ) * sum(((X * theta)-y).^2);
 
 
 % =========================================================================

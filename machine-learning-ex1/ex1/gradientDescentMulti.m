@@ -18,7 +18,12 @@ for iter = 1:num_iters
     %
 
 
+  hx=transpose(theta) * transpose(X); % 1xm
+  z=transpose(hx) - y; % mx1
 
+for i = 1:size(X,2)
+  theta(i) = theta(i) - alpha * (transpose(z) * X(:,i)) / m;
+end
 
 
 
