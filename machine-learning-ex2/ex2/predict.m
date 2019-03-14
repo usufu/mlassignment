@@ -16,7 +16,8 @@ p = zeros(m, 1);
 %
 
 
-
+hx = sigmoid(X * theta)
+p = round(hx)
 
 
 
