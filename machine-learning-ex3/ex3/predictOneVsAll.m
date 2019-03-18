@@ -30,6 +30,20 @@ X = [ones(m, 1) X];
 %       for each row.
 %       
 
+z = X * all_theta';
+hx = sigmoid(z);
+%y_ = round(hx);
+%size(y_)
+[t, it] = max(hx, [], 2);
+p = it;
+
+%[t, it] = max(y_)
+%p = it'
+
+%[probability indices] = max(sigmoid(all_theta * X'))
+%[probability indices] = max(sigmoid(X * all_theta'), [], 2);
+%p = indices';
+
 
 
 
